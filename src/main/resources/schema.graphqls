@@ -1,0 +1,38 @@
+type Teacher {
+  id: ID!
+  name: String!
+  classes: [Class]
+}
+
+type Class {
+  id: ID!
+  name: String!
+  students: [Student]
+}
+
+input ClassInput {
+  className: String!
+  teacherName: String!
+}
+
+type Student {
+  id: ID!
+  name: String!
+}
+
+input StudentInput{
+  studentName: String!
+  className: String!
+}
+
+type Query {
+  teacher(id: ID!): Teacher
+  class(id: ID!): Class
+  student(id: ID!): Student
+}
+
+type Mutation {
+  newStudentToClass(student: StudentInput!): Student!
+  newClass(class: ClassInput!): Class!
+  newTeacher(name: String!): Teacher!
+}
