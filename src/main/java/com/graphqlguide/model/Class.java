@@ -1,4 +1,4 @@
-package model;
+package com.graphqlguide.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

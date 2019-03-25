@@ -1,11 +1,11 @@
 type Teacher {
-  id: ID!
+  id: String!
   name: String!
-  classes: [Class]
+  #classes: [Class]
 }
 
 type Class {
-  id: ID!
+  id: String!
   name: String!
   students: [Student]
 }
@@ -16,7 +16,7 @@ input ClassInput {
 }
 
 type Student {
-  id: ID!
+  id: String!
   name: String!
 }
 
@@ -26,13 +26,13 @@ input StudentInput{
 }
 
 type Query {
-  teacher(id: ID!): Teacher
-  class(id: ID!): Class
-  student(id: ID!): Student
+  teacher(id: String!): Teacher
+#  class(id: String!): Class
+ # student(id: String!): Student
 }
 
-type Mutation {
-  newStudentToClass(student: StudentInput!): Student!
-  newClass(class: ClassInput!): Class!
-  newTeacher(name: String!): Teacher!
-}
+#type Mutation {
+ # newStudentToClass(student: StudentInput!): Student!
+  #newClass(class: ClassInput!): Class!
+  #newTeacher(name: String!): Teacher!
+#}

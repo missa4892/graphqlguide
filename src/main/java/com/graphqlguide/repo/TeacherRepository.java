@@ -1,6 +1,6 @@
-package repo;
+package com.graphqlguide.repo;
 
-import model.Teacher;
+import com.graphqlguide.model.Teacher;
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;

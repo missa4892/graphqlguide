@@ -1,13 +1,15 @@
-package resolver;
+package com.graphqlguide.graphql;
 
 import com.coxautodev.graphql.tools.GraphQLQueryResolver;
 
+import com.graphqlguide.model.Teacher;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import model.Teacher;
-import repo.TeacherRepository;
+import org.springframework.stereotype.Component;
+import com.graphqlguide.repo.TeacherRepository;
 
-public class SchoolQuery implements GraphQLQueryResolver {
+@Component
+public class SchoolQueryResolver implements GraphQLQueryResolver {
 
     @Autowired
     private TeacherRepository teacherRepository;
